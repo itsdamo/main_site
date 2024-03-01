@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 docker.io/node:20-bookworm
-RUN apk update \
-    && apk add git \
+FROM docker.io/node:20-bookworm
+RUN apt update \
+    && apt install -y git \
     && npm i -g @angular/cli@v16-lts
